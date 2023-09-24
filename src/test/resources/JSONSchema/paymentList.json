@@ -1,0 +1,77 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "type": "object",
+  "title": "Get Payment List",
+  "required": [
+    "rescode",
+    "message",
+    "data"
+  ],
+  "properties": {
+    "rescode": {
+      "type": "string"
+    },
+    "message": {
+      "type": "object",
+      "required": [
+        "title",
+        "body"
+      ],
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "body": {
+          "type": "string"
+        }
+      }
+    },
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "payment_method",
+          "payment_title",
+          "payment_detail",
+          "installment_detail",
+          "installment_data",
+          "payment_icon",
+          "payment_data",
+          "status",
+          "inactive_msg"
+        ],
+        "properties": {
+          "payment_method": {
+            "type": "string"
+          },
+          "payment_title": {
+            "type": "string"
+          },
+          "payment_detail": {
+            "type": "string"
+          },
+          "installment_detail": {
+            "type": "string"
+          },
+          "installment_data": {
+            "type": "string"
+          },
+          "payment_icon": {
+            "type": "string"
+          },
+          "payment_data": {
+            "type": "null"
+          },
+          "status": {
+            "type": "string"
+          },
+          "inactive_msg": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

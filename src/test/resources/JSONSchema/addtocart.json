@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "Mobile Add to Cart",
+  "type": "object",
+  "required": ["rescode", "message", "data"],
+  "additionalProperties": true,
+  "properties": {
+    "rescode" : {
+      "type": "string"
+    },
+    "message": {
+      "type": "object",
+      "required": ["title","body"],
+      "additionalProperties": false,
+      "properties": {
+        "title" : {
+          "type": "string"
+        },
+        "body" : {
+          "type": "string"
+        }
+      }
+    },
+    "data": {
+      "type": "object",
+      "required": ["pane"],
+      "additionalProperties": true,
+      "properties": {
+        "pane" : {
+          "type": "array",
+          "minItems": 0,
+          "items": {
+            "type": "object",
+            "required": [
+              "title",
+              "body",
+              "amount",
+              "product_id"
+            ],
+            "additionalProperties": false,
+            "properties": {
+              "title": {
+                "type": "string"
+              },
+              "body": {
+                "type": "string"
+              },
+              "amount": {
+                "type": "integer"
+              },
+              "product_id": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

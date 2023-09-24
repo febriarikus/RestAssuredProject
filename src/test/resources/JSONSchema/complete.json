@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-06/schema#",
+  "title": "Mobile Complete Response",
+  "type": "object",
+  "required": ["rescode", "message", "data"],
+  "additionalProperties": true,
+  "properties": {
+    "rescode" : {
+      "type": "string"
+    },
+    "message": {
+      "type": "object",
+      "required": ["title","body"],
+      "additionalProperties": false,
+      "properties": {
+        "title" : {
+          "type": "string"
+        },
+        "body" : {
+          "type": "string"
+        }
+      }
+    },
+    "data": {
+      "type": "object",
+      "required": ["success_message"],
+      "additionalProperties": true,
+      "properties": {
+        "success_message" : {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
